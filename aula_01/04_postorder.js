@@ -6,11 +6,11 @@ class Node {
     }
 }
 
-function posOrder(node) {
+function postOrder(node) {
     if (node === null) return;
 
-    posOrder(node.left);
-    posOrder(node.right);
+    postOrder(node.left);
+    postOrder(node.right);
     console.log(node.value);
 }
 
@@ -26,4 +26,4 @@ root.right = new Node("C");
 root.right.left = new Node("F");
 root.right.right = new Node("G");
 
-posOrder(root)
+postOrder(root)
